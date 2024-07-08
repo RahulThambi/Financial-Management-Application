@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock Market Simulator"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Currency Section -->
+        <TextView
+            android:id="@+id/currencyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currency: $1000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#388E3C"
+            android:layout_marginTop="8dp" />
+
+        <!-- Today's Markets Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            android:background="#D2B48C">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Markets"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
+                    android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+
+                <TextView
+                    android:id="@+id/marketNewsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/newspaper_background"
+                    android:padding="8dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Stock Input Section -->
+        <EditText
+            android:id="@+id/stockNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Stock Name"
+            android:inputType="textCapCharacters" />
+
+        <EditText
+            android:id="@+id/amountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Amount"
+            android:inputType="number" />
+
+        <!-- Evaluate Button -->
+        <Button
+            android:id="@+id/evaluateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="evaluateStock"
+            android:padding="12dp"
+            android:text="Evaluate"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_rounded"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <!-- Risk Level Display -->
+        <TextView
+            android:id="@+id/riskLevelView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            android:text=""
+            android:textSize="16sp" />
+
+        <!-- Buy and Sell Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/buyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Buy"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:onClick="buyStock"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/button_rounded"
+                />
+
+            <Button
+                android:id="@+id/sellButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="sellStock"
+                android:padding="12dp"
+                android:text="Sell"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_rounded"
+                />
+
+        </LinearLayout>
+
+        <!-- Portfolio Button -->
+        <Button
+            android:id="@+id/portfolioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Portfolio"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:onClick="openPortfolio"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/button_rounded"
+            />
+        <include layout="@layout/fab_layout"/>
+
+    </LinearLayout>
+</ScrollView>

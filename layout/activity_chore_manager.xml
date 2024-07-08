@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chore Management"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/currencyImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_attach_money_24"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/currencyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/pointsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 pts"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search chores"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/totalMoneyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total money earned: $0.00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/addShortTermChoreButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Short Term Chore"
+        android:padding="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shortTermChoreRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="195dp" />
+
+    <Button
+        android:id="@+id/addLongTermChoreButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Long Term Chore"
+        android:padding="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/longTermChoreRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+      />
+    <include layout="@layout/fab_layout"/>
+
+
+
+</LinearLayout>

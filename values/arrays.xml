@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="sticker_array">
+        <item>@drawable/sr2a8a0a7df3baws3</item>
+        <item>@drawable/sr2a8a0a7df3baws3</item>
+        <item>@drawable/sr21737c2eb2caws3</item>
+        <item>@drawable/sr294d02f1ad8aws3</item>
+        <item>@drawable/sr2a4102dece7aws3</item>
+        <item>@drawable/sr2f9c092566daws3</item>
+    </array>
+</resources>

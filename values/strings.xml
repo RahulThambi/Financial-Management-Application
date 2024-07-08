@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Test7</string>
+    <string-array name="filter_options">
+        <item>All</item>
+        <item>Expenses</item>
+        <item>Savings</item>
+        <item>Food</item>
+        <item>Transport</item>
+        <item>Housing</item>
+        <item>Entertainment</item>
+        <item>Utilities</item>
+        <item>Other</item>
+    </string-array>
+</resources>
